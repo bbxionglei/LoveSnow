@@ -33,7 +33,6 @@ LSBASE_API int ls_load_script_init(void* inst)
 	ls_base_func();
 	do
 	{
-
 		//1.创建Lua状态  
 		lua_State* L = luaL_newstate();
 		if (L == NULL)
@@ -44,7 +43,7 @@ LSBASE_API int ls_load_script_init(void* inst)
 		luaL_openlibs(L); //打开以上所有的lib
 		luaL_requiref(L, "ls", luaopenGetLib, 1);
 		//2.加载Lua文件  
-		int bRet = luaL_loadfile(L, "Lua_base.lua");
+		int bRet = luaL_loadfile(L, "Lua_service.lua");
 		if (bRet)
 		{
 			printf("ls_load_script_init  luaL_loadfile error\n");
