@@ -10,7 +10,7 @@ LSBASE_API void* ls_gateway_create(void)
 	return NULL;
 }
 
-LSBASE_API int ls_gateway_init(void* inst)
+LSBASE_API int ls_gateway_init(void* inst, struct ls_context*, const char* parm)
 {
 	ls_base_func();
 	return 0;

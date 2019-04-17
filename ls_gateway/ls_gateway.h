@@ -11,6 +11,6 @@
 extern "C" {
 
 LSBASE_API void* ls_gateway_create(void);
-LSBASE_API int ls_gateway_init(void* inst);
+LSBASE_API int ls_gateway_init(void* inst, struct ls_context*, const char* parm);
 
 }

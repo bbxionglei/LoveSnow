@@ -27,6 +27,69 @@
     <ClInclude Include="ls.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="atomic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rwlock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_env.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="spinlock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_malloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_mq.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_handle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="malloc_hook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="luashrtbl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_harbor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_server.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_daemon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="socket_poll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="socket_select.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="socket_info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="socket_server.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="socket_pipe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_socket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_monitor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ls_base.cpp">
@@ -36,6 +99,48 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ls_module.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_env.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_mq.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_handle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="malloc_hook.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_error.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_harbor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_start.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_timer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_daemon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="socket_server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_socket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_monitor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

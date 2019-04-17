@@ -28,16 +28,16 @@ freebsd : PLAT = freebsd
 
 macosx : SHARED := -fPIC -dynamiclib -Wl,-undefined,dynamic_lookup
 macosx : EXPORT :=
-macosx linux : LOVEXUE_LIBS += -ldl
-linux freebsd : LOVEXUE_LIBS += -lrt
+macosx linux : LOVESNOW_LIBS += -ldl
+linux freebsd : LOVESNOW_LIBS += -lrt
 
 # Turn off jemalloc and malloc hook on macosx
 macosx : MALLOC_STATICLIB :=
-macosx : LOVEXUE_DEFINES :=-DNOUSE_JEMALLOC
+macosx : LOVESNOW_DEFINES :=-DNOUSE_JEMALLOC
 
 linux macosx freebsd :
 	@echo -e "\033[33m before make all \033[0m"
-	$(MAKE) all PLAT=$@ MY_LIBS="$(MY_LIBS)" SHARED="$(SHARED)" EXPORT="$(EXPORT)" MALLOC_STATICLIB="$(MALLOC_STATICLIB)" LOVEXUE_DEFINES="$(LOVEXUE_DEFINES)" LOVEXUE_LIBS="$(LOVEXUE_LIBS)"
+	$(MAKE) all PLAT=$@ MY_LIBS="$(MY_LIBS)" SHARED="$(SHARED)" EXPORT="$(EXPORT)" MALLOC_STATICLIB="$(MALLOC_STATICLIB)" LOVESNOW_DEFINES="$(LOVESNOW_DEFINES)" LOVESNOW_LIBS="$(LOVESNOW_LIBS)"
 	@echo -e "\033[33m after  make all \033[0m"
 
 

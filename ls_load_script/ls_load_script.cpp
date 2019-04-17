@@ -26,7 +26,7 @@ int luaopenGetLib(lua_State* L)
 	luaL_newlib(L, l);
 	return 1; //return one value
 }
-LSBASE_API int ls_load_script_init(void* inst)
+LSBASE_API int ls_load_script_init(void* inst, struct ls_context*, const char* parm)
 {
 	ls_base_func();
 	do

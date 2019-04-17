@@ -59,15 +59,19 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\ls_load_script\lua.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\ls_load_script\lua.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\ls_load_script\lua.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\ls_load_script\lua.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -103,6 +107,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -118,6 +123,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -137,6 +143,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -156,18 +163,54 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="atomic.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="ls.h" />
     <ClInclude Include="ls_base.h" />
+    <ClInclude Include="ls_daemon.h" />
+    <ClInclude Include="ls_env.h" />
+    <ClInclude Include="ls_handle.h" />
+    <ClInclude Include="ls_harbor.h" />
+    <ClInclude Include="ls_log.h" />
+    <ClInclude Include="ls_malloc.h" />
     <ClInclude Include="ls_module.h" />
+    <ClInclude Include="ls_monitor.h" />
+    <ClInclude Include="ls_mq.h" />
+    <ClInclude Include="ls_server.h" />
+    <ClInclude Include="ls_socket.h" />
+    <ClInclude Include="ls_timer.h" />
+    <ClInclude Include="luashrtbl.h" />
+    <ClInclude Include="malloc_hook.h" />
+    <ClInclude Include="socket_info.h" />
+    <ClInclude Include="socket_pipe.h" />
+    <ClInclude Include="socket_poll.h" />
+    <ClInclude Include="rwlock.h" />
+    <ClInclude Include="socket_select.h" />
+    <ClInclude Include="socket_server.h" />
+    <ClInclude Include="spinlock.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ls_base.cpp" />
+    <ClCompile Include="ls_daemon.cpp" />
+    <ClCompile Include="ls_env.cpp" />
+    <ClCompile Include="ls_error.cpp" />
+    <ClCompile Include="ls_handle.cpp" />
+    <ClCompile Include="ls_harbor.cpp" />
+    <ClCompile Include="ls_log.cpp" />
     <ClCompile Include="ls_module.cpp" />
+    <ClCompile Include="ls_monitor.cpp" />
+    <ClCompile Include="ls_mq.cpp" />
+    <ClCompile Include="ls_server.cpp" />
+    <ClCompile Include="ls_socket.cpp" />
+    <ClCompile Include="ls_start.cpp" />
+    <ClCompile Include="ls_timer.cpp" />
+    <ClCompile Include="malloc_hook.cpp" />
+    <ClCompile Include="socket_server.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,6 +12,6 @@
 extern "C" {
 
 LSBASE_API void* ls_load_script_create(void);
-LSBASE_API int ls_load_script_init(void* inst);
+LSBASE_API int ls_load_script_init(void* inst, struct ls_context*, const char* parm);
 
 }

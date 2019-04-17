@@ -19,13 +19,18 @@
 int main()
 {
     std::cout << "Hello World!\n";
-	auto module1 = ls_module_query("./?", "ls_gateway");
-	auto module2 = ls_module_query("./?", "ls_load_script");
+	ls_module_init("./?");
+	auto module1 = ls_module_query("ls_gateway");
+	auto module2 = ls_module_query("ls_load_script");
 	if (module1)
-		module1->init(module1->create());
+		module1->init(module1->create(), 0, 0);
 	if (module2)
-		module2->init(module2->create());
-	std::cout << "Finish!\n";
+		module2->init(module2->create(), 0, 0);
+	rwlock rl;
+	rwlock_init(&rl);
+	spinlock sp;
+	auto_spinlock atsl(&sp);
 	//system("pause");
+	std::cout << "Finish!\n";
 	return 0;
 }
