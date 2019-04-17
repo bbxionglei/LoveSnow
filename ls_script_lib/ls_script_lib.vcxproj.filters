@@ -29,5 +29,11 @@
     <ClCompile Include="ls_script_lib.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="lovesnow_core.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_profile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

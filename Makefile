@@ -13,7 +13,7 @@ $(LUA_STATICLIB) :
 	cd $(LUA_INC) && $(MAKE)
 
 MY_BUILD_PATH ?= .
-CSERVICE = ls_gateway ls_base ls_load_script mLualib
+CSERVICE = ls_gateway ls_base ls_load_script lovesnow
 CSERVICE_PATH ?= .
 
 LS_BASE_SRC = \
@@ -60,8 +60,8 @@ $(CSERVICE_PATH)/ls_load_script.so : ls_load_script/ls_load_script.cpp $(LUA_LIB
 	@echo -e "\033[36m ls_load_script.so \033[0m"
 	$(CC) $(CFLAGS) $(SHARED) $^ -o $@ -I.
 
-$(CSERVICE_PATH)/mLualib.so : ls_script_lib/ls_script_lib.cpp $(LUA_LIB)
-	@echo -e "\033[36m mLualib.so \033[0m"
+$(CSERVICE_PATH)/lovesnow.so : ls_script_lib/ls_script_lib.cpp $(LUA_LIB)
+	@echo -e "\033[36m lovesnow.so \033[0m"
 	$(CC) $(CFLAGS) $(SHARED) $^ -o $@ -I.
 
 clean :

@@ -82,25 +82,25 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
     <IntDir>$(SolutionDir)Bin\.tmp\$(ProjectName)</IntDir>
-    <TargetName>mLualib</TargetName>
+    <TargetName>lovesnow</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(SolutionDir)Bin\.tmp\$(ProjectName)</IntDir>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <TargetName>mLualib</TargetName>
+    <TargetName>lovesnow</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Bin\</OutDir>
     <IntDir>$(SolutionDir)Bin\.tmp\$(ProjectName)</IntDir>
-    <TargetName>mLualib</TargetName>
+    <TargetName>lovesnow</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(SolutionDir)Bin\.tmp\$(ProjectName)</IntDir>
     <OutDir>$(SolutionDir)Bin\</OutDir>
-    <TargetName>mLualib</TargetName>
+    <TargetName>lovesnow</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -176,6 +176,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="lovesnow_core.cpp" />
+    <ClCompile Include="ls_profile.cpp" />
     <ClCompile Include="ls_script_lib.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
