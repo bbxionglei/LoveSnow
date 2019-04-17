@@ -6,8 +6,3 @@ function call_x()
 	x.dllHello()
 	ls.exeHello()
 end
-
-call_x()
-print("Lua_base.lua end")
-
-

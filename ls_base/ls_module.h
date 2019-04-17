@@ -14,8 +14,8 @@ struct ls_module {
 	ls_dl_signal signal;
 };
 
-EXTERN_C_START
+extern "C" {
+
 LSBASE_API struct ls_module* ls_module_query(const char* path,const char* name);
 
-
-EXTERN_C_END
+}

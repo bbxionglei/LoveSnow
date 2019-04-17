@@ -21,8 +21,11 @@ int main()
     std::cout << "Hello World!\n";
 	auto module1 = ls_module_query("./?", "ls_gateway");
 	auto module2 = ls_module_query("./?", "ls_load_script");
-	module1->init(module1->create());
-	module2->init(module2->create());
+	if (module1)
+		module1->init(module1->create());
+	if (module2)
+		module2->init(module2->create());
+	std::cout << "Finish!\n";
 	//system("pause");
 	return 0;
 }

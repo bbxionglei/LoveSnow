@@ -5,9 +5,13 @@ _try_open(const char * path, const char* name) {
 	size_t path_size = strlen(path);
 	size_t name_size = strlen(name);
 
-	int sz = path_size + name_size;
+	int sz = path_size + name_size + 5;
 	//search path
-	HMODULE dl = nullptr;
+#ifdef _WIN32
+	HMODULE dl = NULL;
+#else
+	void* dl = NULL;
+#endif
 	char* tmp = new char[sz];
 	do
 	{
@@ -15,7 +19,7 @@ _try_open(const char * path, const char* name) {
 		while (*path == ';') path++;
 		if (*path == '\0') break;
 		l = strchr(path, ';');
-		if (l == nullptr) l = path + strlen(path);
+		if (l == NULL) l = path + strlen(path);
 		int len = l - path;
 		int i;
 		for (i = 0; path[i] != '?' && i < len; i++) {
@@ -29,10 +33,16 @@ _try_open(const char * path, const char* name) {
 			fprintf(stderr, "Invalid C service path\n");
 			exit(1);
 		}
+#ifdef _WIN32
+		strcpy(tmp + strlen(tmp), ".dll");
 		dl = LoadLibraryA(tmp);
+#else
+		strcpy(tmp + strlen(tmp), ".so");
+		dl = dlopen(tmp, RTLD_NOW | RTLD_GLOBAL);
+#endif
 		path = l;
-	} while (dl == nullptr);
-	if (dl == nullptr) {
+	} while (dl == NULL);
+	if (dl == NULL) {
 		fprintf(stderr, "LoadLibraryA try open %s failed\n", name);
 		exit(1);
 	}
@@ -44,17 +54,22 @@ get_api(struct ls_module* mod, const char* api_name) {
 	size_t name_size = strlen(mod->name);
 	size_t api_size = strlen(api_name);
 	char* tmp = new char[name_size + api_size + 1];
+	memset(tmp, 0, name_size + api_size + 1);
 	memcpy(tmp, mod->name, name_size);
-	memcpy(tmp + name_size, api_name, api_size + 1);
 	char* ptr = strrchr(tmp, '.');
-	if (ptr == nullptr) {
-		ptr = tmp;
+	if (ptr == NULL) {
+		ptr = tmp + strlen(tmp);
 	}
 	else {
-		ptr = ptr + 1;
+		ptr[0] = 0;
 	}
-	void* ret = nullptr;
-	ret = GetProcAddress((HMODULE)mod->module, ptr);
+	memcpy(ptr, api_name, api_size + 1);
+	void* ret = NULL;
+#ifdef _WIN32
+	ret = GetProcAddress((HMODULE)mod->module, tmp);
+#else
+	ret = dlsym(mod->module, tmp);
+#endif
 	return ret;
 }
 static int
@@ -65,7 +80,7 @@ open_sym(struct ls_module* mod) {
 	mod->release = (ls_dl_release)get_api(mod, "_release");
 	mod->signal = (ls_dl_signal)get_api(mod, "_signal");
 
-	return mod->init == nullptr;
+	return mod->init == NULL;
 }
 ls_module* ls_module_query(const char* path, const char* name)
 {
@@ -79,5 +94,5 @@ ls_module* ls_module_query(const char* path, const char* name)
 			return M;
 		}
 	}
-	return nullptr;
+	return NULL;
 }

@@ -5,3 +5,6 @@
 /.vs
 /Bin
 
+*.o
+/Lua_lib/lua-5-3-4/liblua.a
+/Lua_lib/lua-5-3-4/lua

@@ -15,8 +15,7 @@ static int exeHello(lua_State* L)
 }
 LSBASE_API void* ls_load_script_create(void)
 {
-	printf("ls_load_script_create is call in ls_load_script\n");
-    return nullptr;
+    return NULL;
 }
 int luaopenGetLib(lua_State* L)
 {
@@ -29,7 +28,6 @@ int luaopenGetLib(lua_State* L)
 }
 LSBASE_API int ls_load_script_init(void* inst)
 {
-	printf("ls_load_script_init   is call in ls_load_script\n");
 	ls_base_func();
 	do
 	{
