@@ -16,7 +16,6 @@ CWARNSCPP= \
 	-Wdisabled-optimization \
 	-Waggregate-return \
 	-Wdouble-promotion \
-	-fPIC \
 	#-Wno-aggressive-loop-optimizations   # not accepted by clang \
 	#-Wlogical-op   # not accepted by clang \
 	# the next warnings generate too much noise, so they are disabled
@@ -59,7 +58,7 @@ MYLDFLAGS= $(LOCAL) -Wl,-E
 MYLIBS= -ldl -lreadline
 
 
-CC= gcc#clang-3.8
+CC= clang-3.8
 CFLAGS= -Wall -O2 $(MYCFLAGS)
 AR= ar rcu
 RANLIB= ranlib
@@ -82,11 +81,11 @@ LIB_O=	lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o lstrlib.o \
 
 LUA_T=	lua
 LUA_O=	lua.o
-LUA_SO= liblua.so
+
 # LUAC_T=	luac
 # LUAC_O=	luac.o print.o
 
-ALL_T= $(CORE_T) $(LUA_T) $(LUAC_T) 
+ALL_T= $(CORE_T) $(LUA_T) $(LUAC_T)
 ALL_O= $(CORE_O) $(LUA_O) $(LUAC_O) $(AUX_O) $(LIB_O)
 ALL_A= $(CORE_T)
 
@@ -106,12 +105,8 @@ $(LUA_T): $(LUA_O) $(CORE_T)
 $(LUAC_T): $(LUAC_O) $(CORE_T)
 	$(CC) -o $@ $(MYLDFLAGS) $(LUAC_O) $(CORE_T) $(LIBS) $(MYLIBS)
 
-$(LUA_SO): $(CORE_O) $(LIB_O)
-	$(CC) -o $@ -shared $? -ldl -lm
-
-
 clean:
-	#rcsclean -u
+	rcsclean -u
 	$(RM) $(ALL_T) $(ALL_O)
 
 depend:

@@ -1,6 +1,6 @@
-local ls = require "ls"
-local netpack = require "ls.netpack"
-local socketdriver = require "ls.socketdriver"
+local ls = require "lovesnow"
+local netpack = require "lovesnow.netpack"
+local socketdriver = require "lovesnow.socketdriver"
 
 local gateserver = {}
 

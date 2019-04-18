@@ -29,7 +29,7 @@ get_time() {
 	return now.time_since_epoch().count();
 }
 
-struct snlua {
+struct ls_load_script {
 	lua_State* L;
 	struct ls_context* ctx;
 	const char* preload;

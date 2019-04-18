@@ -264,7 +264,7 @@ ls_start(struct ls_config* config) {
 
 	ls_handle_namehandle(ls_context_handle(ctx), "logger");//关联名字到这个handle
 
-	//以 snlua bootstrap 为例 加载 snlua 并传入参数 bootstrap
+	//以 ls_load_script bootstrap 为例 加载 ls_load_script 并传入参数 bootstrap
 	bootstrap(ctx, config->bootstrap);
 
 	//看了半天代码，终于到了开启工作线程的时候，累死我了,可是程序执行到这时1毫秒都用不了

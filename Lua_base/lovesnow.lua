@@ -357,7 +357,7 @@ local function yield_call(service, session)
 	return msg,sz
 end
 
--- ls.call(".launcher", "lua" , "LAUNCH", "snlua", name, ...)
+-- ls.call(".launcher", "lua" , "LAUNCH", "ls_load_script", name, ...)
 function ls.call(addr, typename, ...)
 	local tag = session_coroutine_tracetag[running_thread]
 	if tag then
@@ -617,7 +617,7 @@ function ls.dispatch_message(...)
 end
 
 function ls.newservice(name, ...)
-	return ls.call(".launcher", "lua" , "LAUNCH", "snlua", name, ...)
+	return ls.call(".launcher", "lua" , "LAUNCH", "ls_load_script", name, ...)
 end
 
 function ls.uniqueservice(global, ...)
@@ -803,10 +803,10 @@ function ls.memlimit(bytes)
 end
 
 -- Inject internal debug framework
-local debug = require "lovesnow.debug"
-debug.init(ls, {
-	dispatch = ls.dispatch_message,
-	suspend = suspend,
-})
+--local debug = require "lovesnow.debug"
+--debug.init(ls, {
+--	dispatch = ls.dispatch_message,
+--	suspend = suspend,
+--})
 
 return ls

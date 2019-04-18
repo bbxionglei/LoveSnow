@@ -1,4 +1,4 @@
-local ls = require "ls"
+local ls = require "lovesnow"
 
 local function dft_loader(path, name, G)
 	local errlist = {}

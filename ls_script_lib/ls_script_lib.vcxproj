@@ -115,6 +115,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -130,6 +131,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -149,6 +151,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -168,6 +171,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -179,8 +183,20 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="lovesnow_core.cpp" />
     <ClCompile Include="lovesnow_profile.cpp" />
+    <ClCompile Include="lsha1.cpp" />
+    <ClCompile Include="ls_cluster.cpp" />
+    <ClCompile Include="ls_crypt.cpp" />
+    <ClCompile Include="ls_datasheet.cpp" />
+    <ClCompile Include="ls_debugchannel.cpp" />
+    <ClCompile Include="ls_memory.cpp" />
+    <ClCompile Include="ls_mongo.cpp" />
+    <ClCompile Include="ls_netpack.cpp" />
     <ClCompile Include="ls_script_lib.cpp" />
+    <ClCompile Include="ls_sharedata.cpp" />
+    <ClCompile Include="ls_socketdriver.cpp" />
+    <ClCompile Include="ls_stm.cpp" />
     <ClCompile Include="lua-seri.cpp" />
+    <ClCompile Include="ls_multicast.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

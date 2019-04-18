@@ -68,5 +68,8 @@ extern "C" {
 	LSBASE_API void socket_server_userobject(struct socket_server*, struct socket_object_interface* soi);
 
 	LSBASE_API struct socket_info* socket_server_info(struct socket_server*);
+	LSBASE_API int xclose(int fd);
+	LSBASE_API int xsetsockopt(int fd, int level, int optname, void* optval, int optlen);
+	LSBASE_API int xgetsockopt(int fd, int level, int optname, void* optval, void* optlen);
 }
 #endif

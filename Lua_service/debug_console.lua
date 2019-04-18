@@ -181,7 +181,7 @@ function COMMAND.start(...)
 end
 
 function COMMAND.log(...)
-	local ok, addr = pcall(ls.call, ".launcher", "lua", "LOGLAUNCH", "snlua", ...)
+	local ok, addr = pcall(ls.call, ".launcher", "lua", "LOGLAUNCH", "ls_load_script", ...)
 	if ok then
 		if addr then
 			return { [ls.address(addr)] = ... }

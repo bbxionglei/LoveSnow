@@ -77,5 +77,5 @@ ls.start(function()
 		-- ignore all the command
 	end)
 
-	harbor_service = assert(ls.launch("harbor", harbor_id, ls.self()))
+	harbor_service = assert(ls.launch("ls_harborm", harbor_id, ls.self()))
 end)

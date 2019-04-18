@@ -1,5 +1,5 @@
 -- module proto as examples/proto.lua
-package.path = "./examples/?.lua;" .. package.path
+package.path = "../examples/?.lua;" .. package.path
 
 local ls = require "lovesnow"
 local sprotoparser = require "sprotoparser"

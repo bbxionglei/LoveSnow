@@ -1,8 +1,8 @@
-local ls = require "ls"
+local ls = require "lovesnow"
 local gateserver = require "snax.gateserver"
-local netpack = require "ls.netpack"
-local crypt = require "ls.crypt"
-local socketdriver = require "ls.socketdriver"
+local netpack = require "lovesnow.netpack"
+local crypt = require "lovesnow.crypt"
+local socketdriver = require "lovesnow.socketdriver"
 local assert = assert
 local b64encode = crypt.base64encode
 local b64decode = crypt.base64decode

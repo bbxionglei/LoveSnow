@@ -28,12 +28,16 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_xue", "ls_xue\ls_xue.vcxproj", "{52DBA46F-C871-49C6-896F-C0E5FF889940}"
 	ProjectSection(ProjectDependencies) = postProject
 		{6D451012-C48E-4FA9-8894-80B0102E4AE7} = {6D451012-C48E-4FA9-8894-80B0102E4AE7}
+		{42030824-BEBD-4284-832A-80DF49E2C1F1} = {42030824-BEBD-4284-832A-80DF49E2C1F1}
 		{FD8BC92F-311D-43DD-AF02-B4699F431672} = {FD8BC92F-311D-43DD-AF02-B4699F431672}
 		{14E54C37-5151-423D-B530-2CD28DA7C97D} = {14E54C37-5151-423D-B530-2CD28DA7C97D}
 		{30B29985-383A-4598-BAF3-426B7ACD8197} = {30B29985-383A-4598-BAF3-426B7ACD8197}
 		{99BDFF93-EFD6-4356-9F4A-0B44FBA5D566} = {99BDFF93-EFD6-4356-9F4A-0B44FBA5D566}
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED} = {1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}
 		{FA2E7EC1-B6EA-4158-A598-0C7D9686AED4} = {FA2E7EC1-B6EA-4158-A598-0C7D9686AED4}
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2} = {4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}
 		{2EACE8E8-B359-4A9C-A5B2-D04D0F22EEFF} = {2EACE8E8-B359-4A9C-A5B2-D04D0F22EEFF}
+		{951D41F2-0BE0-4E08-9403-E60BC231954E} = {951D41F2-0BE0-4E08-9403-E60BC231954E}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua_lib", "Lua_lib\Lua_lib.vcxproj", "{6D451012-C48E-4FA9-8894-80B0102E4AE7}"
@@ -41,7 +45,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lua_base", "Lua_base", "{07D6A562-E885-4DA9-885F-006DDFC4B291}"
 	ProjectSection(SolutionItems) = preProject
 		Lua_base\loader.lua = Lua_base\loader.lua
-		Lua_base\ls.lua = Lua_base\ls.lua
+		Lua_base\lovesnow.lua = Lua_base\lovesnow.lua
 		Lua_base\Lua_base.lua = Lua_base\Lua_base.lua
 		Lua_base\md5.lua = Lua_base\md5.lua
 		Lua_base\sproto.lua = Lua_base\sproto.lua
@@ -166,56 +170,71 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "http", "http", "{AE9BD202-E
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "snax", "snax", "{5554BF86-7641-4692-9A9D-BA7A658FA48D}"
+	ProjectSection(SolutionItems) = preProject
+		Lua_base\snax\gateserver.lua = Lua_base\snax\gateserver.lua
+		Lua_base\snax\hotfix.lua = Lua_base\snax\hotfix.lua
+		Lua_base\snax\interface.lua = Lua_base\snax\interface.lua
+		Lua_base\snax\loginserver.lua = Lua_base\snax\loginserver.lua
+		Lua_base\snax\msgserver.lua = Lua_base\snax\msgserver.lua
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lovesnow", "lovesnow", "{0FE98113-F47A-4BDA-8381-6889CB6B34D6}"
 	ProjectSection(SolutionItems) = preProject
-		Lua_base\snownet\cluster.lua = Lua_base\snownet\cluster.lua
-		Lua_base\snownet\coroutine.lua = Lua_base\snownet\coroutine.lua
-		Lua_base\snownet\datacenter.lua = Lua_base\snownet\datacenter.lua
-		Lua_base\snownet\debug.lua = Lua_base\snownet\debug.lua
-		Lua_base\snownet\dns.lua = Lua_base\snownet\dns.lua
-		Lua_base\snownet\harbor.lua = Lua_base\snownet\harbor.lua
-		Lua_base\snownet\inject.lua = Lua_base\snownet\inject.lua
-		Lua_base\snownet\injectcode.lua = Lua_base\snownet\injectcode.lua
-		Lua_base\snownet\manager.lua = Lua_base\snownet\manager.lua
-		Lua_base\snownet\mqueue.lua = Lua_base\snownet\mqueue.lua
-		Lua_base\snownet\multicast.lua = Lua_base\snownet\multicast.lua
-		Lua_base\snownet\queue.lua = Lua_base\snownet\queue.lua
-		Lua_base\snownet\remotedebug.lua = Lua_base\snownet\remotedebug.lua
-		Lua_base\snownet\service.lua = Lua_base\snownet\service.lua
-		Lua_base\snownet\sharedata.lua = Lua_base\snownet\sharedata.lua
-		Lua_base\snownet\sharemap.lua = Lua_base\snownet\sharemap.lua
-		Lua_base\snownet\snax.lua = Lua_base\snownet\snax.lua
-		Lua_base\snownet\socket.lua = Lua_base\snownet\socket.lua
-		Lua_base\snownet\socketchannel.lua = Lua_base\snownet\socketchannel.lua
+		Lua_base\lovesnow\cluster.lua = Lua_base\lovesnow\cluster.lua
+		Lua_base\lovesnow\coroutine.lua = Lua_base\lovesnow\coroutine.lua
+		Lua_base\lovesnow\datacenter.lua = Lua_base\lovesnow\datacenter.lua
+		Lua_base\lovesnow\debug.lua = Lua_base\lovesnow\debug.lua
+		Lua_base\lovesnow\dns.lua = Lua_base\lovesnow\dns.lua
+		Lua_base\lovesnow\harbor.lua = Lua_base\lovesnow\harbor.lua
+		Lua_base\lovesnow\inject.lua = Lua_base\lovesnow\inject.lua
+		Lua_base\lovesnow\injectcode.lua = Lua_base\lovesnow\injectcode.lua
+		Lua_base\lovesnow\manager.lua = Lua_base\lovesnow\manager.lua
+		Lua_base\lovesnow\mqueue.lua = Lua_base\lovesnow\mqueue.lua
+		Lua_base\lovesnow\multicast.lua = Lua_base\lovesnow\multicast.lua
+		Lua_base\lovesnow\queue.lua = Lua_base\lovesnow\queue.lua
+		Lua_base\lovesnow\remotedebug.lua = Lua_base\lovesnow\remotedebug.lua
+		Lua_base\lovesnow\service.lua = Lua_base\lovesnow\service.lua
+		Lua_base\lovesnow\sharedata.lua = Lua_base\lovesnow\sharedata.lua
+		Lua_base\lovesnow\sharemap.lua = Lua_base\lovesnow\sharemap.lua
+		Lua_base\lovesnow\snax.lua = Lua_base\lovesnow\snax.lua
+		Lua_base\lovesnow\socket.lua = Lua_base\lovesnow\socket.lua
+		Lua_base\lovesnow\socketchannel.lua = Lua_base\lovesnow\socketchannel.lua
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "datasheet", "datasheet", "{11A05B0D-94FA-4116-9D19-81C9964B77DC}"
 	ProjectSection(SolutionItems) = preProject
-		Lua_base\snownet\datasheet\builder.lua = Lua_base\snownet\datasheet\builder.lua
-		Lua_base\snownet\datasheet\dump.lua = Lua_base\snownet\datasheet\dump.lua
-		Lua_base\snownet\datasheet\init.lua = Lua_base\snownet\datasheet\init.lua
+		Lua_base\lovesnow\datasheet\builder.lua = Lua_base\lovesnow\datasheet\builder.lua
+		Lua_base\lovesnow\datasheet\dump.lua = Lua_base\lovesnow\datasheet\dump.lua
+		Lua_base\lovesnow\datasheet\init.lua = Lua_base\lovesnow\datasheet\init.lua
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{02FEFBF2-1BCC-46F8-B21D-57585AC5FEB2}"
 	ProjectSection(SolutionItems) = preProject
-		Lua_base\snownet\db\redis\cluster.lua = Lua_base\snownet\db\redis\cluster.lua
-		Lua_base\snownet\db\redis\crc16.lua = Lua_base\snownet\db\redis\crc16.lua
-		Lua_base\snownet\db\mongo.lua = Lua_base\snownet\db\mongo.lua
-		Lua_base\snownet\db\mysql.lua = Lua_base\snownet\db\mysql.lua
-		Lua_base\snownet\db\redis.lua = Lua_base\snownet\db\redis.lua
+		Lua_base\lovesnow\db\mongo.lua = Lua_base\lovesnow\db\mongo.lua
+		Lua_base\lovesnow\db\mysql.lua = Lua_base\lovesnow\db\mysql.lua
+		Lua_base\lovesnow\db\redis.lua = Lua_base\lovesnow\db\redis.lua
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sharedata", "sharedata", "{3C83A05A-673E-4B97-A011-AF13A25D92A9}"
 	ProjectSection(SolutionItems) = preProject
-		Lua_base\snownet\sharedata\corelib.lua = Lua_base\snownet\sharedata\corelib.lua
+		Lua_base\lovesnow\sharedata\corelib.lua = Lua_base\lovesnow\sharedata\corelib.lua
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "redis", "redis", "{BB3621B9-AA3D-4FE8-B6B7-1B55969A9376}"
 	ProjectSection(SolutionItems) = preProject
-		Lua_base\snownet\db\redis\crc16.lua = Lua_base\snownet\db\redis\crc16.lua
-		Lua_base\snownet\db\redis.lua = Lua_base\snownet\db\redis.lua
+		Lua_base\lovesnow\db\redis\cluster.lua = Lua_base\lovesnow\db\redis\cluster.lua
+		Lua_base\lovesnow\db\redis\crc16.lua = Lua_base\lovesnow\db\redis\crc16.lua
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_bson", "ls_script_bson\ls_script_bson.vcxproj", "{951D41F2-0BE0-4E08-9403-E60BC231954E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_client", "ls_script_client\ls_script_client.vcxproj", "{42030824-BEBD-4284-832A-80DF49E2C1F1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_sproto", "ls_script_sproto\ls_script_sproto.vcxproj", "{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_lpeg", "ls_script_lpeg\ls_script_lpeg.vcxproj", "{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua_exe", "Lua_exe\Lua_exe.vcxproj", "{60CEB047-2240-41CF-8FD7-47621695E2D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -289,6 +308,46 @@ Global
 		{30B29985-383A-4598-BAF3-426B7ACD8197}.Release|Win32.Build.0 = Release|Win32
 		{30B29985-383A-4598-BAF3-426B7ACD8197}.Release|x64.ActiveCfg = Release|x64
 		{30B29985-383A-4598-BAF3-426B7ACD8197}.Release|x64.Build.0 = Release|x64
+		{951D41F2-0BE0-4E08-9403-E60BC231954E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{951D41F2-0BE0-4E08-9403-E60BC231954E}.Debug|Win32.Build.0 = Debug|Win32
+		{951D41F2-0BE0-4E08-9403-E60BC231954E}.Debug|x64.ActiveCfg = Debug|x64
+		{951D41F2-0BE0-4E08-9403-E60BC231954E}.Debug|x64.Build.0 = Debug|x64
+		{951D41F2-0BE0-4E08-9403-E60BC231954E}.Release|Win32.ActiveCfg = Release|Win32
+		{951D41F2-0BE0-4E08-9403-E60BC231954E}.Release|Win32.Build.0 = Release|Win32
+		{951D41F2-0BE0-4E08-9403-E60BC231954E}.Release|x64.ActiveCfg = Release|x64
+		{951D41F2-0BE0-4E08-9403-E60BC231954E}.Release|x64.Build.0 = Release|x64
+		{42030824-BEBD-4284-832A-80DF49E2C1F1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{42030824-BEBD-4284-832A-80DF49E2C1F1}.Debug|Win32.Build.0 = Debug|Win32
+		{42030824-BEBD-4284-832A-80DF49E2C1F1}.Debug|x64.ActiveCfg = Debug|x64
+		{42030824-BEBD-4284-832A-80DF49E2C1F1}.Debug|x64.Build.0 = Debug|x64
+		{42030824-BEBD-4284-832A-80DF49E2C1F1}.Release|Win32.ActiveCfg = Release|Win32
+		{42030824-BEBD-4284-832A-80DF49E2C1F1}.Release|Win32.Build.0 = Release|Win32
+		{42030824-BEBD-4284-832A-80DF49E2C1F1}.Release|x64.ActiveCfg = Release|x64
+		{42030824-BEBD-4284-832A-80DF49E2C1F1}.Release|x64.Build.0 = Release|x64
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}.Debug|Win32.Build.0 = Debug|Win32
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}.Debug|x64.ActiveCfg = Debug|x64
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}.Debug|x64.Build.0 = Debug|x64
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}.Release|Win32.ActiveCfg = Release|Win32
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}.Release|Win32.Build.0 = Release|Win32
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}.Release|x64.ActiveCfg = Release|x64
+		{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}.Release|x64.Build.0 = Release|x64
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}.Debug|Win32.Build.0 = Debug|Win32
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}.Debug|x64.ActiveCfg = Debug|x64
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}.Debug|x64.Build.0 = Debug|x64
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}.Release|Win32.ActiveCfg = Release|Win32
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}.Release|Win32.Build.0 = Release|Win32
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}.Release|x64.ActiveCfg = Release|x64
+		{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}.Release|x64.Build.0 = Release|x64
+		{60CEB047-2240-41CF-8FD7-47621695E2D1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{60CEB047-2240-41CF-8FD7-47621695E2D1}.Debug|Win32.Build.0 = Debug|Win32
+		{60CEB047-2240-41CF-8FD7-47621695E2D1}.Debug|x64.ActiveCfg = Debug|x64
+		{60CEB047-2240-41CF-8FD7-47621695E2D1}.Debug|x64.Build.0 = Debug|x64
+		{60CEB047-2240-41CF-8FD7-47621695E2D1}.Release|Win32.ActiveCfg = Release|Win32
+		{60CEB047-2240-41CF-8FD7-47621695E2D1}.Release|Win32.Build.0 = Release|Win32
+		{60CEB047-2240-41CF-8FD7-47621695E2D1}.Release|x64.ActiveCfg = Release|x64
+		{60CEB047-2240-41CF-8FD7-47621695E2D1}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

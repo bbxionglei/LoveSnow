@@ -9,7 +9,7 @@ ls.start(function()
 
 	local standalone = ls.getenv "standalone"
 
-	local launcher = assert(ls.launch("snlua","launcher"))
+	local launcher = assert(ls.launch("ls_load_script","launcher"))
 	ls.name(".launcher", launcher)
 
 	local harbor_id = tonumber(ls.getenv "harbor" or 0)

@@ -239,7 +239,7 @@ ls.start(function()
 	end)
 	ls.dispatch("text", monitor_harbor(master_fd))
 
-	harbor_service = assert(ls.launch("harbor", harbor_id, ls.self()))
+	harbor_service = assert(ls.launch("ls_harborm", harbor_id, ls.self()))
 
 	local hs_message = pack_package("H", harbor_id, slave_address)
 	socket.write(master_fd, hs_message)

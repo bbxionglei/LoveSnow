@@ -15,6 +15,7 @@ $(LUA_STATICLIB) :
 MY_BUILD_PATH ?= .
 CSERVICE = ls_gateway ls_base ls_load_script lovesnow
 CSERVICE_PATH ?= .
+LUA_CLIB = ls client bson md5 sproto lpeg
 
 LS_BASE_SRC = \
 	atomic.h framework.h ls.h ls_base.h ls_daemon.h ls_env.h ls_handle.h ls_harbor.h \

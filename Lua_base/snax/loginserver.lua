@@ -1,7 +1,7 @@
-local ls = require "ls"
-require "ls.manager"
-local socket = require "ls.socket"
-local crypt = require "ls.crypt"
+local ls = require "lovesnow"
+require "lovesnow.manager"
+local socket = require "lovesnow.socket"
+local crypt = require "lovesnow.crypt"
 local table = table
 local string = string
 local assert = assert

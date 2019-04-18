@@ -14,6 +14,8 @@ local function console_main_loop()
 	local stdin = socket.stdin()
 	while true do
 		local cmdline = socket.readline(stdin, "\n")
+		print("console_main_loop:")
+		print(cmdline)
 		local split = split_cmdline(cmdline)
 		local command = split[1]
 		if command == "snax" then

@@ -41,5 +41,41 @@
     <ClCompile Include="lua-seri.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ls_cluster.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_datasheet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_debugchannel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_memory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_mongo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_multicast.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_netpack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_sharedata.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_socketdriver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_stm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_crypt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lsha1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

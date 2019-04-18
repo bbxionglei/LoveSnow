@@ -88,6 +88,7 @@ sp_wait(int efd, struct st_event* e, int max) {
 	struct sp_select_st* p = (struct sp_select_st*)efd;
 	assert(p != 0);
 	timeval tv = { 0 };
+	tv.tv_usec = 100;
 	static struct sp_select_st sp;
 	sp.readfds = p->readfds;
 	sp.writefds = p->writefds;
