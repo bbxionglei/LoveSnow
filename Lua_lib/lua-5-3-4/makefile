@@ -48,7 +48,8 @@ TESTS= -DLUA_USER_H='"ltests.h"'
 
 # -mtune=native -fomit-frame-pointer
 # -fno-stack-protector
-LOCAL = $(TESTS) $(CWARNS) -g
+# LOCAL = $(TESTS) $(CWARNS) -g
+LOCAL = $(CWARNS) -g
 
 
 

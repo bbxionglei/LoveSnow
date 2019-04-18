@@ -114,8 +114,8 @@ LUA_API void *debug_realloc (void *ud, void *block,
 
 
 /* make stack-overflow tests run faster */
-#undef LUAI_MAXSTACK
-#define LUAI_MAXSTACK   50000
+//#undef LUAI_MAXSTACK
+//#define LUAI_MAXSTACK   50000
 
 
 #undef LUAI_USER_ALIGNMENT_T

@@ -10,14 +10,14 @@ ls.start(function()
 	if not ls.getenv "daemon" then
 		local console = ls.newservice("console")
 	end
-	ls.newservice("debug_console",8000)
+	ls.newservice("debug_console",17001)
 	ls.newservice("simpledb")
 	local watchdog = ls.newservice("watchdog")
 	ls.call(watchdog, "lua", "start", {
-		port = 8888,
+		port = 17002,
 		maxclient = max_client,
 		nodelay = true,
 	})
-	ls.error("Watchdog listen on", 8888)
+	ls.error("Watchdog listen on", 17002)
 	ls.exit()
 end)
