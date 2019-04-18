@@ -73,7 +73,7 @@ write_pid(const char* pidfile) {
 	return pid;
 #else
 	//TODO win32
-	return 0;
+	return 1;
 #endif
 }
 

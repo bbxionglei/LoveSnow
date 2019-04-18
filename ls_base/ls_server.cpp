@@ -449,7 +449,7 @@ static void
 handle_exit(struct ls_context* context, uint32_t handle) {
 	if (handle == 0) {
 		handle = context->handle;
-		ls_error(context, "KILL self");
+		ls_error(context, "KILL self:%s", context->mod->name);
 	}
 	else {
 		ls_error(context, "KILL :%0x", handle);

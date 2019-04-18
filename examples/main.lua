@@ -6,6 +6,7 @@ local max_client = 64
 ls.start(function()
 	ls.error("Server start")
 	ls.uniqueservice("protoloader")
+	-- TODO  console cmdline 为 false 时 程序出bug
 	if not ls.getenv "daemon" then
 		local console = ls.newservice("console")
 	end

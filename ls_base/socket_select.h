@@ -44,7 +44,7 @@ sp_add(int efd, int sock, void* ud) {
 			s_sock_ud[sock] = ud;
 		}
 		FD_SET(sock, &p->readfds);
-		//FD_SET(sock, &p->writefds);
+		FD_SET(sock, &p->writefds);
 		FD_SET(sock, &p->exceptfds);
 		if (p->max_sock < sock) {
 			p->max_sock = sock;

@@ -6,7 +6,7 @@ LUA_INC ?= Lua_lib/lua-5-3-4
 LUA_STATICLIB := $(LUA_INC)/liblua.a
 LUA_LIB ?= $(LUA_STATICLIB)
 
-CFLAGS = -g -O0 -Wall -std=c++11 -fPIC -I$(LUA_INC) 
+CFLAGS = -g -O0 -Wall -std=c++11 -fPIC -lpthread -I$(LUA_INC) 
 
 $(LUA_STATICLIB) :
 	@echo "LUA_STATICLIB $(LUA_STATICLIB)"
@@ -82,7 +82,7 @@ $(CSERVICE_PATH)/bson.so : ls_script_bson/ls_bson.cpp $(LUA_LIB)
 	$(CC) $(CFLAGS) $(SHARED) $^ -o $@ -I.
 
 $(CSERVICE_PATH)/client.so : ls_script_client/ls_clientsocket.cpp \
-	ls_script_client/ls_crypt.cpp ls_script_lib/lsha1.cpp $(LUA_LIB)
+	ls_script_client/ls_crypt.cpp ls_script_lib/lsha1.cpp $(LUA_LIB) ls_base.so
 	@echo -e "\033[36m client.so \033[0m"
 	$(CC) $(CFLAGS) $(SHARED) $^ -o $@ -I.
 

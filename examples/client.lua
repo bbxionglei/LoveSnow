@@ -1,4 +1,4 @@
-package.cpath = "../Bin/?.dll"
+package.cpath = "../Bin/?.so"
 package.path = "../Lua_base/?.lua;examples/?.lua"
 
 if _VERSION ~= "Lua 5.3" then

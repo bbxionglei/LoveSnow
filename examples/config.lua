@@ -13,4 +13,4 @@ bootstrap = "ls_load_script bootstrap"	-- The service for bootstrap
 -- snax_interface_g = "snax_g"
 --cpath = root.."cservice/?.so"
 cpath = root.."Bin/?"
--- daemon = "./ls.pid"
+daemon = "ls.pid"
