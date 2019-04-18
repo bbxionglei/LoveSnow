@@ -1,6 +1,6 @@
 
 #include <ls_base/ls.h>
-//TODO #include "lua-seri.h"
+#include "lua-seri.h"
 #include "ls_script_lib.h"
 
 #define KNRM  "\x1B[0m"
@@ -377,7 +377,7 @@ lharbor(lua_State * L) {
 
 static int
 lpackstring(lua_State * L) {
-	//TODO luaseri_pack(L);
+	luaseri_pack(L);
 	char* str = (char*)lua_touserdata(L, -2);
 	int sz = lua_tointeger(L, -1);
 	lua_pushlstring(L, str, sz);
@@ -537,8 +537,8 @@ int luaopen_lovesnow_core(lua_State * L) {
 	// functions without ls_context
 	luaL_Reg l2[] = {
 		{ "tostring", ltostring },
-		//TODO { "pack", luaseri_pack },
-		//TODO { "unpack", luaseri_unpack },
+		{ "pack", luaseri_pack },
+		{ "unpack", luaseri_unpack },
 		{ "packstring", lpackstring },
 		{ "trash" , ltrash },
 		{ "now", lnow },

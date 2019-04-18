@@ -29,5 +29,6 @@ extern "C" {
 	LSBASE_API void ls_initthread(int m);
 
 	LSBASE_API void ls_profile_enable(int enable);
+	LSBASE_API char* strsep_(char** stringp, const char* delim);
 }
 #endif

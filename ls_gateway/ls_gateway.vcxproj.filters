@@ -21,6 +21,12 @@
     <ClInclude Include="ls_gateway.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="databuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hashid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

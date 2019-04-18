@@ -10,7 +10,7 @@
 #endif
 extern "C" {
 
-LSBASE_API void* ls_gateway_create(void);
-LSBASE_API int ls_gateway_init(void* inst, struct ls_context*, const char* parm);
-
+	LSBASE_API void* ls_gateway_create(void);
+	LSBASE_API void ls_gateway_release(void* g_);
+	LSBASE_API int ls_gateway_init(void* g_, struct ls_context* ctx, const char* parm);
 }

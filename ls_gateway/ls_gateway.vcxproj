@@ -167,7 +167,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="databuffer.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="hashid.h" />
     <ClInclude Include="ls_gateway.h" />
   </ItemGroup>
   <ItemGroup>

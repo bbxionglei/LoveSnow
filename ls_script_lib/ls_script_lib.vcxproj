@@ -173,12 +173,14 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="ls_script_lib.h" />
+    <ClInclude Include="lua-seri.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="lovesnow_core.cpp" />
-    <ClCompile Include="ls_profile.cpp" />
+    <ClCompile Include="lovesnow_profile.cpp" />
     <ClCompile Include="ls_script_lib.cpp" />
+    <ClCompile Include="lua-seri.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

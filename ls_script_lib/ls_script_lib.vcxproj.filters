@@ -21,6 +21,9 @@
     <ClInclude Include="ls_script_lib.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="lua-seri.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -32,7 +35,10 @@
     <ClCompile Include="lovesnow_core.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ls_profile.cpp">
+    <ClCompile Include="lovesnow_profile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-seri.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

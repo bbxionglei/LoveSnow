@@ -10,8 +10,8 @@
 #endif
 
 extern "C" {
-
 LSBASE_API void* ls_load_script_create(void);
-LSBASE_API int ls_load_script_init(void* inst, struct ls_context*, const char* parm);
-
+LSBASE_API int ls_load_script_init(void* l_, struct ls_context* ctx, const char* args);
+LSBASE_API void ls_load_script_release(void* l_);
+LSBASE_API void ls_load_script_signal(void* l_, int signal);
 }

@@ -34,12 +34,8 @@ all :
 	#$(MAKE) $(foreach v, $(LUA_CLIB), $(LUA_CLIB_PATH)/$(v).so) 
 	$(MAKE) $(foreach v, $(CSERVICE), $(CSERVICE_PATH)/$(v).so) 
 	$(MAKE) $(MY_BUILD_PATH)/xue 
-	\cp Lua_service/*.lua ./ -f
-	\cp Lua_base/*.lua ./ -f
-	\cp examples/*.lua ./ -f
 	\mv $(MY_BUILD_PATH)/xue ./Bin/ -f
 	\mv $(MY_BUILD_PATH)/*.so ./Bin/ -f
-	\mv $(MY_BUILD_PATH)/*.lua ./Bin/ -f
 	@echo -e "\033[36m after  all \033[0m"
 
 $(MY_BUILD_PATH)/xue : $(foreach v, $(LS_SRC), ls_xue/$(v)) $(LUA_LIB) $(MALLOC_STATICLIB) \
