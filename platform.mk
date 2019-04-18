@@ -2,6 +2,7 @@ PLAT ?= none
 PLATS = linux freebsd macosx
 
 CC := g++
+GCC := gcc
 
 #ifneq ($(PLAT), none)
 

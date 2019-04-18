@@ -58,8 +58,9 @@ MYLDFLAGS= $(LOCAL) -Wl,-E
 MYLIBS= -ldl -lreadline
 
 
-CC= clang-3.8
-CFLAGS= -Wall -O2 $(MYCFLAGS)
+#CC= clang-3.8
+CC= gcc
+CFLAGS= -Wall -O2 -fPIC $(MYCFLAGS)
 AR= ar rcu
 RANLIB= ranlib
 RM= rm -f
@@ -106,7 +107,7 @@ $(LUAC_T): $(LUAC_O) $(CORE_T)
 	$(CC) -o $@ $(MYLDFLAGS) $(LUAC_O) $(CORE_T) $(LIBS) $(MYLIBS)
 
 clean:
-	rcsclean -u
+	#rcsclean -u
 	$(RM) $(ALL_T) $(ALL_O)
 
 depend:

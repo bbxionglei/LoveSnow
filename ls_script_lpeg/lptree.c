@@ -1297,15 +1297,16 @@ static struct luaL_Reg metareg[] = {
 
 
 
-LSBASE_API int luaopen_lpeg (lua_State *L) {
-  luaL_newmetatable(L, PATTERN_T);
-  lua_pushnumber(L, MAXBACK);  /* initialize maximum backtracking */
-  lua_setfield(L, LUA_REGISTRYINDEX, MAXSTACKIDX);
-  luaL_setfuncs(L, metareg, 0);
-  luaL_newlib(L, pattreg);
-  lua_pushvalue(L, -1);
-  lua_setfield(L, -3, "__index");
-  return 1;
+//extern "C"	
+LSBASE_API int luaopen_lpeg(lua_State* L) {
+	luaL_newmetatable(L, PATTERN_T);
+	lua_pushnumber(L, MAXBACK);  /* initialize maximum backtracking */
+	lua_setfield(L, LUA_REGISTRYINDEX, MAXSTACKIDX);
+	luaL_setfuncs(L, metareg, 0);
+	luaL_newlib(L, pattreg);
+	lua_pushvalue(L, -1);
+	lua_setfield(L, -3, "__index");
+	return 1;
 }
 
 /* }====================================================== */

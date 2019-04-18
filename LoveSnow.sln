@@ -92,12 +92,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{33
 		examples\config.c1 = examples\config.c1
 		examples\config.c2 = examples\config.c2
 		examples\config.login = examples\config.login
-		examples\config.lua = examples\config.lua
+		examples\config2.lua = examples\config2.lua
 		examples\config.mc = examples\config.mc
 		examples\config.mongodb = examples\config.mongodb
 		examples\config.mysql = examples\config.mysql
 		examples\config.path = examples\config.path
-		examples\config.path.lua = examples\config.path.lua
+		examples\config2.path.lua = examples\config2.path.lua
 		examples\config.userlog = examples\config.userlog
 		examples\config_log = examples\config_log
 		examples\example.lua = examples\example.lua
@@ -227,12 +227,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "redis", "redis", "{BB3621B9
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_bson", "ls_script_bson\ls_script_bson.vcxproj", "{951D41F2-0BE0-4E08-9403-E60BC231954E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D451012-C48E-4FA9-8894-80B0102E4AE7} = {6D451012-C48E-4FA9-8894-80B0102E4AE7}
+		{FA2E7EC1-B6EA-4158-A598-0C7D9686AED4} = {FA2E7EC1-B6EA-4158-A598-0C7D9686AED4}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_client", "ls_script_client\ls_script_client.vcxproj", "{42030824-BEBD-4284-832A-80DF49E2C1F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D451012-C48E-4FA9-8894-80B0102E4AE7} = {6D451012-C48E-4FA9-8894-80B0102E4AE7}
+		{FA2E7EC1-B6EA-4158-A598-0C7D9686AED4} = {FA2E7EC1-B6EA-4158-A598-0C7D9686AED4}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_sproto", "ls_script_sproto\ls_script_sproto.vcxproj", "{1429ADBD-4CD2-47EF-AA60-0FFA6E8844ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D451012-C48E-4FA9-8894-80B0102E4AE7} = {6D451012-C48E-4FA9-8894-80B0102E4AE7}
+		{FA2E7EC1-B6EA-4158-A598-0C7D9686AED4} = {FA2E7EC1-B6EA-4158-A598-0C7D9686AED4}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_lpeg", "ls_script_lpeg\ls_script_lpeg.vcxproj", "{4A3D27E3-CAAC-4407-9D5E-D29ED06C2FD2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6D451012-C48E-4FA9-8894-80B0102E4AE7} = {6D451012-C48E-4FA9-8894-80B0102E4AE7}
+		{FA2E7EC1-B6EA-4158-A598-0C7D9686AED4} = {FA2E7EC1-B6EA-4158-A598-0C7D9686AED4}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua_exe", "Lua_exe\Lua_exe.vcxproj", "{60CEB047-2240-41CF-8FD7-47621695E2D1}"
 EndProject
