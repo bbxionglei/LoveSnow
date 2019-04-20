@@ -1,18 +1,19 @@
-package.cpath = "../Bin/?.so"
-package.path = "../Lua_base/?.lua;examples/?.lua"
+package.cpath = "../Bin/?.dll"
+package.path = "../Lua_base/?.lua;../examples/?.lua;?.lua"
 
 if _VERSION ~= "Lua 5.3" then
 	error "Use lua 5.3"
 end
+print ("in client")
 
 local socket = require "client.socket"
+----[[
 local proto = require "proto"
 local sproto = require "sproto"
-
 local host = sproto.new(proto.s2c):host "package"
 local request = host:attach(sproto.new(proto.c2s))
 
-local fd = assert(socket.connect("127.0.0.1", 8888))
+local fd = assert(socket.connect("127.0.0.1", 17002))
 
 local function send_package(fd, pack)
 	local package = string.pack(">s2", pack)
@@ -100,9 +101,11 @@ end
 
 send_request("handshake")
 send_request("set", { what = "hello", value = "world" })
+io.input(io.stdin)
 while true do
 	dispatch_package()
-	local cmd = socket.readstdin()
+	--local cmd = socket.readstdin()
+	local cmd = io.read()
 	if cmd then
 		if cmd == "quit" then
 			send_request("quit")
@@ -113,3 +116,5 @@ while true do
 		socket.usleep(100)
 	end
 end
+--]]
+print ("out client")

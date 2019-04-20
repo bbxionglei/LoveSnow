@@ -44,6 +44,7 @@ int xerrno() {
 	case WSAEINTR: en = EINTR; break;
 	case WSATRY_AGAIN: en = EAGAIN; break;
 	case WSAEMFILE: en = EMFILE; break;
+	case WSAEWOULDBLOCK: en = EAGAIN; break;
 	default:break;
 	}
 	return en;

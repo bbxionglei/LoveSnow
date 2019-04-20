@@ -253,6 +253,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ls_script_lpeg", "ls_script
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua_exe", "Lua_exe\Lua_exe.vcxproj", "{60CEB047-2240-41CF-8FD7-47621695E2D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{42030824-BEBD-4284-832A-80DF49E2C1F1} = {42030824-BEBD-4284-832A-80DF49E2C1F1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

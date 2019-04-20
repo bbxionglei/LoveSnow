@@ -71,5 +71,7 @@ extern "C" {
 	LSBASE_API int xclose(int fd);
 	LSBASE_API int xsetsockopt(int fd, int level, int optname, void* optval, int optlen);
 	LSBASE_API int xgetsockopt(int fd, int level, int optname, void* optval, void* optlen);
+	LSBASE_API int xerrno();
+	LSBASE_API char* xstrerror(int en);
 }
 #endif

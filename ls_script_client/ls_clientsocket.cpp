@@ -10,6 +10,7 @@
 #include <string.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <iostream>
 
 #ifndef _WINSOCK_DEPRECATED_NO_WARNINGS
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
@@ -72,9 +73,11 @@ block_send(lua_State * L, int fd, const char* buffer, int sz) {
 	while (sz > 0) {
 		int r = send(fd, buffer, sz, 0);
 		if (r < 0) {
-			if (errno == EAGAIN || errno == EINTR)
+			int en = xerrno();
+			if (en == EAGAIN || en == EINTR) {
 				continue;
-			luaL_error(L, "socket error: %s", strerror(errno));
+			}
+			luaL_error(L, "socket error: %s", xstrerror(en));
 		}
 		buffer += r;
 		sz -= r;
@@ -123,10 +126,11 @@ lrecv(lua_State * L) {
 		return 1;
 	}
 	if (r < 0) {
-		if (errno == EAGAIN || errno == EINTR) {
+		int en = xerrno();
+		if (en == EAGAIN || en == EINTR) {
 			return 0;
 		}
-		luaL_error(L, "socket error: %s", strerror(errno));
+		luaL_error(L, "++socket error: %s", xstrerror(en));
 	}
 	lua_pushlstring(L, buffer, r);
 	return 1;
@@ -144,6 +148,11 @@ lusleep(lua_State * L) {
 #define QUEUE_SIZE 1024
 
 struct queue {
+	void initialize() {
+		this->head = 0;
+		this->tail = 0;
+		memset(this->queue, 0, sizeof(char*) * QUEUE_SIZE);
+	};
 	std::mutex lock;
 	int head;
 	int tail;
@@ -207,12 +216,13 @@ int luaopen_client_socket(lua_State * L) {
 	};
 	luaL_newlib(L, l);
 
-	struct queue* q = (struct queue*)lua_newuserdata(L, sizeof(*q));
-	memset(q, 0, sizeof(*q));
-	lua_pushcclosure(L, lreadstdin, 1);
-	lua_setfield(L, -2, "readstdin");
+	//struct queue* q = (struct queue*)lua_newuserdata(L, sizeof(*q));
+	//q = new (q) struct queue;
+	//q->initialize();
+	//lua_pushcclosure(L, lreadstdin, 1);
+	//lua_setfield(L, -2, "readstdin");
 
-	std::thread th(readline_stdin, q);
+	//std::thread th(readline_stdin, q);
 
-	return 1;
+ 	return 1;
 }
