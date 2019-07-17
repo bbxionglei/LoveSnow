@@ -1,6 +1,6 @@
 include platform.mk
 
-
+# test
 # lua
 LUA_INC ?= Lua_lib/lua-5-3-4
 LUA_STATICLIB := $(LUA_INC)/liblua.a
